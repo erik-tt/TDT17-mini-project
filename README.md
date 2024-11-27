@@ -1,2 +1,6 @@
 # TDT17 mini project
-The mini project for the  TDT17 specialization modul task 4. We are solving the medical image segmentation task.
+This is the code for the mini project submission for Erik Tveraaen Torvbråten and Magnus Løvhøiden in TDT17 visual intelligence. The task we chose is **option 2a: Medical Image Segmentation.** 
+
+This tasks consist of attempting the two tasks in the [Head and Neck Tumor Segmentation for MR-Guided Applications (HNTS-MRG) 2024](https://hntsmrg24.grand-challenge.org/). The code used to train models for task 1 (preRT challenge) can be found in preRT. Similar code is used to attempt task 2 (midRT challenge) and can be found in midRT. Models from [MONAI](https://monai.io/) were used in this project. Residual U-Net, SegResNet, and Swin-U-Net transformer were all explored, but Residual U-Net and SegResNet were used to attempt the preRT challenge and Residual U-Net was used to attempt the midRT challenge.
+
+The data set was provided to us and is not present in the repository, but the training data can be found on the HNTS-MRG web page. Training on the NVIDIA A100 on the IDUN HPC cluster at NTNU we managed to get an average dice score of 0.660 with a Residual U-Net model with a ROI of [480, 480, 48] and 400 epochs. For the midRT challenge we only used midRT data and trained a single Residual U-Net achieving a average dice score of 0.609.
